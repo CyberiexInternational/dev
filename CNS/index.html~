@@ -7,7 +7,11 @@
       Cyberia Network System Homepage
       </title>
   </head>
-  <body>
-    </body>
-  
+  <body bgcolor="black">
+    <div class="main-reverse">
+      <div class="header"
+	   How Does this look??
+	   </div>
+      </div>
+  </body>
 </html>

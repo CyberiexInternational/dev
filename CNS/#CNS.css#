@@ -66,4 +66,3 @@
     --aug-inlay-bg: radial-gradient(gold, black);
     --aug-inlay-opacity: 0.5;
   }
- 
