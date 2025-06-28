@@ -53,8 +53,8 @@ try:
     logging.info("draw text")
     
     # Create blank image for drawing.
-    Font1 = ImageFont.truetype("../Font/Font00.ttf",18)
-    Font2 = ImageFont.truetype("../Font/Font00.ttf",14)        
+    Font1 = ImageFont.truetype("../Font/Font00.ttf",15)
+    Font2 = ImageFont.truetype("../Font/Font00.ttf",15)        
     i=0
     logging.info("Start loop")
 
@@ -72,6 +72,7 @@ try:
         draw.text((watlx+5, watly), timenow , fill = "#99ff99",font=Font1)
         draw.text((watlx+5, watly + 20), "CPU Temp : " , fill = "#99ff99",font=Font2)
         draw.text((watlx+90, watly + 20), tempinfo + " 'C", fill = "#ff2222",font=Font2)
+      
         image1 = image1.rotate(90)
         disp.ShowImage(image1)
 
