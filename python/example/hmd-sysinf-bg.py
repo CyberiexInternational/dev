@@ -63,6 +63,12 @@ try:
         
     #Loop forever, once per quarter second, updating display each time
     while True:
+            
+        ImagePath = "../pic/logo.png"
+        image = Image.open(ImagePath)	
+        # image = image.rotate(0)
+        disp.ShowImage(image)
+        time.sleep(3)    
         image1 = Image.new("RGB", (disp.width,disp.height ), "BLACK")
         draw = ImageDraw.Draw(image1)
         draw.rectangle([(watlx-10, watly-10), (wabrx+10, wabry+10)], fill = "#007700", outline="#005500")
@@ -73,7 +79,6 @@ try:
         logging.info(currenttime)
         timenow=currenttime.strftime("%H") + ":" + currenttime.strftime("%M") + ":" + currenttime.strftime("%S") + "    " + currenttime.strftime("%d") + " " + currenttime.strftime("%b") + " " + currenttime.strftime("%Y")
         tempinfo=str(cpu.temperature)
-        #sigstr=str(random.randrange(1,100)) + "%"
         
         draw.text((watlx+5, watly + 15), timenow , fill = "#99ff99",font=Font1)
         draw.text((watlx+5, watly + 25), "CPU Temp : " + tempinfo + "'C", fill = "#99ff99",font=Font2)
@@ -81,7 +86,8 @@ try:
         image1 = image1.rotate(90)
         disp.ShowImage(image1)
 
-        #Lets get lat long of kilmorie road if poss
+       
+        time.sleep(2)
         
         
         time.sleep(0.25)
